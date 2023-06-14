@@ -1,0 +1,22 @@
+class LL 
+{
+	public static void main(String[] args) 
+	{
+		String  i = "";
+		switch(i)
+		{
+			case "xyz":
+				System.out.println("from case \"xyz\" ");
+				break;
+			case "def":
+				System.out.println("from case \"def\" ");
+				break;
+			case "abc":
+				System.out.println("from case \"abc\" ");
+				break;
+			case "":
+				System.out.println("from case \"\" ");
+				break;
+		}
+	}
+}
