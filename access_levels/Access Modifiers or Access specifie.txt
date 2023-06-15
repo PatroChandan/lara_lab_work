@@ -1,0 +1,64 @@
+Access Modifiers or Access specifiers
+--------------------------------------
+In java we have four access specifiers
+1.private
+2.default
+3.protected
+4.public
+
+1.private
+----------
+-In java, the 'private' keyword is an access modifier used to restrict the visibility (scope) of a class, method, field(data members, variables)
+-private members scope(visibility) is limited to only that class.Not outside.
+-If you are trying to access it outside you will get a CTE(compile time error).
+-constructors(arg,no arg) can also be declared with access modifiers.
+-if we declare a constructor as private then, we cant able to call that constructor from outside the declared class.
+-if you are calling the private constructor within the declared class itself then, its syntactically proper.
+-constructors are not be inherited to the subclasses but they are involving in the inheritance process.
+
+class Q
+{
+	private Q()
+	{
+		System.out.println("Q()");
+	}
+}
+class R extends Q
+{
+	
+}
+
+-for the above program will be getting error, bcz in each and every class there will be a default constructor in the R class also that default constructor first statement(super()) is calling super class no arg constructor and which is private, so that is why the CTE.
+-if you are not providing any access specifier for a constructor then it is with the default access specifier.
+-in case of SIB(static initialization block) and in case of IIb(instance initialization block) we cant declared them with any access specifier.ifyou do you will get error.
+-if we heve two java files with the different classes, and they are in the same folder, assume you are trying to access one java file class within the other java file, compiler can able to easily identify that java file and compile that java file as well.
+Note:-if the class is declared as default or public.
+     -if you are trying to access the members of that class, those members must be default, or public not private.
+       the only scope of default members
+------------------------------------------------
+DEFAULT-within the class,within the same package sub-class
+       -within the same package non-sub class
+       -within the indirect-sub classes of the same package.
+********Any whwere in the same package is possible*********
+-in software rst represents restructureText
+-default members doesnt inherit to the different package sub-class.
+-if you are using package statement and import statement then first you must keep package declaration then only import declaration.
+-while importing a package if you mention '.*' that indicates that you are importing all the files from that particular package. Ex:import lara.*;
+-but if you wanted to import only a particular class you can use the syntax import packageName.Classname; Ex:import lara.N; (This type of import is recommended bcz insted importing all the files that will be the unneccessory load.)
+-once you import a package in the file, that package or package members are available to the entire java file itself(where import statement is declared).
+
+Scenario :: if you are importing a particular class from a package then that class only will be considered for that entire java file insted of already available class in the same package.
+           if you are not using import statement then only it will be considering the current package members with same name while you are refering.
+
+
+
+
+
+
+
+
+
+
+
+
+
